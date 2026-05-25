@@ -108,6 +108,12 @@ input {
     }
 
     .top-panel {
+    position: sticky;
+
+    top: 12px;
+
+    z-index: 100;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -125,7 +131,7 @@ input {
         0 8px 30px rgba(0, 0, 0, 0.08),
         0 2px 8px rgba(0, 0, 0, 0.04);
 
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     }
@@ -179,8 +185,8 @@ input {
     border: 1px solid rgba(255,255,255,0.4);
     }
 
-    .slot:hover {
-    transform: translateY(-3px);
+    .slot:active {
+    transform: scale(0.98);
     }
 
     .container {
