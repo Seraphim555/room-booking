@@ -145,7 +145,7 @@ input {
 
 .input-error {
 
-    margin-top: 10px;
+    margin-top: 4px;
 
     margin-bottom: 18px;
 
@@ -293,9 +293,7 @@ input {
     button {
     touch-action: manipulation;
     }
-    .admin-slot:active {
-    transform: scale(0.96);
-    }
+    
     .top-panel {
     position: sticky;
     top: 0;
