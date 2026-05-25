@@ -99,6 +99,12 @@ input {
     border: 1px solid #ccc;
 }
 
+.datetime {
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.75;
+}
+
 /* MOBILE VERSION */
 
 @media (max-width: 768px) {
@@ -249,5 +255,20 @@ input {
     .datetime {
     text-align: right;
     white-space: nowrap;
+    }
+
+    .datetime {
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.45);
+
+    backdrop-filter: blur(8px);
+
+    font-size: 14px;
+
+    font-weight: 600;
     }
 }
