@@ -103,6 +103,20 @@ input {
 
 @media (max-width: 768px) {
 
+    body {
+
+        background-image:
+            url("/static/images/aaa.png");
+
+        background-size: cover;
+
+        background-position: center;
+
+        background-repeat: no-repeat;
+
+        background-attachment: fixed;
+    }
+
     .container {
         padding: 12px;
     }
