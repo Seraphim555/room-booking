@@ -139,8 +139,20 @@ input {
     }
 
     .status-card {
-        padding: 20px;
-        border-radius: 16px;
+    margin-top: 20px;
+
+    padding: 40px;
+
+    border-radius: 28px;
+
+    color: white;
+
+    text-align: center;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.12);
     }
 
     .status-card h2 {
@@ -153,8 +165,26 @@ input {
     }
 
     .slot {
-        padding: 18px;
-        border-radius: 14px;
+    background: rgba(255,255,255,0.9);
+
+    border-radius: 24px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.06);
+
+    transition: 0.25s ease;
+
+    border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .slot:hover {
+    transform: translateY(-3px);
+    }
+
+    .container {
+    padding-bottom: 60px;
     }
 
     .slot-time {
