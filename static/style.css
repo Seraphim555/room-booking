@@ -243,10 +243,6 @@ input {
     border: 1px solid rgba(255,255,255,0.4);
     }
 
-    .slot:active {
-    transform: scale(0.98);
-    }
-
     .container {
     padding-bottom: 60px;
     }
@@ -274,7 +270,7 @@ input {
     touch-action: manipulation;
     }
     .admin-slot:active {
-    transform: scale(0.98);
+    transform: scale(0.96);
     }
     .top-panel {
     position: sticky;
@@ -324,5 +320,9 @@ input {
     border-radius: 20px;
 
     margin-top: 20px;
+    }
+
+    .admin-slot {
+        transition: transform 0.2s ease;
     }
 }
