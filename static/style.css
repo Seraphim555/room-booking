@@ -124,16 +124,12 @@ input {
 
     color: white;
 
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb 0%,
-            #1d4ed8 100%
-        );
-
-    box-shadow:
-        0 8px 24px rgba(37, 99, 235, 0.25);
-
+    background: linear-gradient(
+        135deg,
+        #4f627d 0%,
+        #3b4a5f 100%
+    );
+    box-shadow: 0 8px 24px rgba(79, 98, 125, 0.15); /* Более мягкая тень */
     transition: 0.25s ease;
 }
 
@@ -275,8 +271,8 @@ input {
     button {
     touch-action: manipulation;
     }
-    .admin-slot:active {
-    transform: scale(0.98);
+    .admin-slot:hover {
+    transform: scale(1.03);
     }
     .top-panel {
     position: sticky;
@@ -324,5 +320,7 @@ input {
     font-size: 16px;
 
     border-radius: 20px;
+
+    margin-top: 20px;
     }
 }
