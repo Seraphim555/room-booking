@@ -60,11 +60,11 @@ body {
 }
 
 .slot.free {
-    border-left: 10px solid #22c55e;
+    border-left: 10px solid #16a34a;
 }
 
 .slot.busy {
-    border-left: 10px solid #ef4444;
+    border-left: 10px solid #dc2626;
 }
 
 .slot.past {
@@ -97,4 +97,85 @@ input {
     font-size: 18px;
     border-radius: 10px;
     border: 1px solid #ccc;
+}
+
+/* MOBILE VERSION */
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 12px;
+    }
+
+    .top-panel {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .datetime {
+        font-size: 18px;
+    }
+
+    .status-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .status-card h2 {
+        font-size: 28px;
+    }
+
+    .slots {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .slot {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .slot-time {
+        font-size: 24px;
+    }
+
+    .slot-status {
+        font-size: 18px;
+    }
+
+    .admin-slot {
+        min-height: 80px;
+        font-size: 22px;
+    }
+
+    input {
+        font-size: 20px;
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+    input,
+    button {
+    touch-action: manipulation;
+    }
+    .admin-slot:active {
+    transform: scale(0.98);
+    }
+    .top-panel {
+    position: sticky;
+    top: 0;
+    background: #f3f4f6;
+    z-index: 100;
+    padding-bottom: 10px;
+    }
+    * {
+    box-sizing: border-box;
+    }
+    body {
+    -webkit-font-smoothing: antialiased;
+    }
 }
