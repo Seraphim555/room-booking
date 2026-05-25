@@ -113,6 +113,8 @@ input {
 
     margin-bottom: 24px;
 
+    margin-top: 20px;
+
     padding: 18px 24px;
 
     border-radius: 24px;
@@ -138,7 +140,7 @@ input {
     transform: translateY(-2px);
 
     box-shadow:
-        0 12px 30px rgba(37, 99, 235, 0.35);
+        0 12px 30px rgba(255, 255, 255, 0.35);
 }
 
 /* MOBILE VERSION */
@@ -271,8 +273,8 @@ input {
     button {
     touch-action: manipulation;
     }
-    .admin-slot:hover {
-    transform: scale(1.03);
+    .admin-slot:active {
+    transform: scale(0.98);
     }
     .top-panel {
     position: sticky;
@@ -291,6 +293,8 @@ input {
     .datetime {
     text-align: right;
     white-space: nowrap;
+    max-width: 150px;
+    display: inline-block;
     }
 
     .datetime {
