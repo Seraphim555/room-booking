@@ -293,7 +293,7 @@ input {
     .datetime {
     text-align: right;
     white-space: nowrap;
-    max-width: 150px;
+    max-width: 50px;
     display: inline-block;
     }
 
