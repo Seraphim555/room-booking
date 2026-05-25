@@ -286,6 +286,10 @@ input {
         font-size: 22px;
     }
 
+    .admin-slot:active {
+        transform: scale(0.98);
+    }
+
     input {
         font-size: 20px;
         padding: 18px;
