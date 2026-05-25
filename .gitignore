@@ -1,0 +1,20 @@
+# Python (кэш и скомпилированные файлы)
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Виртуальное окружение (если вы создадите его в папке проекта)
+venv/
+.venv/
+env/
+ENV/
+
+# Среда разработки VS Code
+.vscode/
+
+# bookings.json
+
+# Системные файлы
+.DS_Store
+Thumbs.db
