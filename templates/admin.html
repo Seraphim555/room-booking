@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Бронирование {{ room_id }}</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 style="color: #000000;" >Бронирование аудитории {{ room_id }}</h1>
+
+    <div class="admin-panel">
+
+        <input type="text" id="name" placeholder="Введите ваше имя">
+
+        <div class="slots">
+            {% for slot in slots %}
+            <button class="slot admin-slot" data-slot="{{ slot }}">
+                {{ slot }}
+            </button>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    const ROOM_ID = "{{ room_id }}";
+</script>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
