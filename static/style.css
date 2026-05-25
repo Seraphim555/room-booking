@@ -87,10 +87,6 @@ body {
     font-size: 20px;
 }
 
-.admin-slot:active {
-    transform: scale(1.03);
-}
-
 input {
     width: 100%;
     padding: 15px;
@@ -165,6 +161,12 @@ input {
 .input-error.visible {
 
     opacity: 1;
+}
+
+@media (min-width: 769px) {
+    .admin-slot:hover {
+        transform: scale(1.03);
+    }
 }
 
 /* MOBILE VERSION */
@@ -329,7 +331,6 @@ input {
     }
 
     .switch-page-btn:active {
-
     transform: scale(0.98);
     }
     
