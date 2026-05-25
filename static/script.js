@@ -84,6 +84,14 @@ function setupAdminButtons(data) {
             const name = nameInput
                 ? nameInput.value.trim()
                 : "";
+            const errorElement = document.getElementById("name-error");
+
+            if (errorElement) {
+
+                errorElement.innerText = "";
+
+                errorElement.classList.remove("visible");
+            }
 
             try {
 
@@ -105,7 +113,12 @@ function setupAdminButtons(data) {
                 } else {
 
                     if (!name) {
-                        alert("Введите имя");
+                        const errorElement = document.getElementById("name-error");
+
+                        errorElement.innerText = "Введите имя";
+
+                        errorElement.classList.add("visible");
+
                         return;
                     }
 

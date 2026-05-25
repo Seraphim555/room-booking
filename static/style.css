@@ -143,6 +143,30 @@ input {
         0 12px 30px rgba(255, 255, 255, 0.35);
 }
 
+.input-error {
+
+    margin-top: 10px;
+
+    margin-bottom: 18px;
+
+    padding-left: 6px;
+
+    color: #dc2626;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    opacity: 0;
+
+    transition: 0.2s ease;
+}
+
+.input-error.visible {
+
+    opacity: 1;
+}
+
 /* MOBILE VERSION */
 
 @media (max-width: 768px) {
@@ -320,9 +344,5 @@ input {
     border-radius: 20px;
 
     margin-top: 20px;
-    }
-
-    .admin-slot {
-        transition: transform 0.2s ease;
     }
 }
