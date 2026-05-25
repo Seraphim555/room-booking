@@ -87,7 +87,7 @@ body {
     font-size: 20px;
 }
 
-.admin-slot:hover {
+.admin-slot:active {
     transform: scale(1.03);
 }
 
@@ -145,7 +145,7 @@ input {
 
 .input-error {
 
-    margin-top: 4px;
+    margin-top: 6px;
 
     margin-bottom: 18px;
 
