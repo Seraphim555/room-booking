@@ -401,6 +401,10 @@ input {
         font-size: 13px;
     }
 
+    .admin-slots {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 /* =========================
