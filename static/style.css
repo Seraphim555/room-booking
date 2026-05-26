@@ -88,7 +88,7 @@ body {
 }
 
 input {
-    width: 100%;
+    width: 96.7%;
     padding: 15px;
     font-size: 18px;
     border-radius: 10px;
@@ -161,6 +161,19 @@ input {
 .input-error.visible {
 
     opacity: 1;
+}
+
+.buttons-wrapper {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+}
+
+.buttons-wrapper .switch-page-btn {
+    flex: 1;
+    text-align: center;
+    max-height: 14px;  
+    width: 100%;
 }
 
 @media (min-width: 769px) {
