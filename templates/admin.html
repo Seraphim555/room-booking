@@ -18,21 +18,25 @@
 
     <div class="top-panel">
 
-    <h1>Аудитория {{ room_id }}</h1>
+        <h1>Аудитория {{ room_id }}</h1>
 
-    <div class="datetime" style="text-align: left;">
-        Панель<br>бронирования
+        <div class="datetime" style="text-align: left;">
+            Панель<br>бронирования
+        </div>
+
     </div>
 
+    <div class="buttons-wrapper">
+
+        <a href="/room/" class="switch-page-btn">
+            Главное меню
+        </a>
+
+        <a href="/room/{{ room_id }}" class="switch-page-btn">
+            Перейти к экрану аудитории
+        </a>
+        
     </div>
-
-    <a href="/room/{{ room_id }}" class="switch-page-btn">
-        Перейти к экрану аудитории
-    </a>
-
-    <a href="/room/" class="switch-page-btn">
-        Главное меню
-    </a>
 
     <div class="admin-panel">
 

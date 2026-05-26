@@ -29,13 +29,17 @@
         <h2 id="status-text">Свободна</h2>
     </div>
 
-    <a href="/admin/{{ room_id }}" class="switch-page-btn">
-        Перейти к бронированию
-    </a>
+    <div class="buttons-wrapper">
 
-    <a href="/room/" class="switch-page-btn">
-        Главное меню
-    </a>
+        <a href="/room/" class="switch-page-btn">
+            Главное меню
+        </a>
+
+        <a href="/admin/{{ room_id }}" class="switch-page-btn">
+            Перейти к бронированию
+        </a>
+
+    </div>
 
     <div class="slots">
         {% for slot in slots %}
