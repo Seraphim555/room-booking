@@ -109,7 +109,7 @@ input {
 
     margin-bottom: 24px;
 
-    margin-top: 20px;
+    margin-top: 14px;
 
     padding: 18px 24px;
 
@@ -375,7 +375,15 @@ input {
     .buttons-wrapper .switch-page-btn {
     flex: 1;
     text-align: center;
-    max-height: 30px;
+    max-height: 50px;
+    }
+
+    .admin-slots {
+        margin-top: 6px;
+    }
+
+    .room-slots {
+        margin-top: 6px;
     }
 
 }
