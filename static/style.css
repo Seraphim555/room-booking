@@ -44,7 +44,7 @@ body {
     background: #ef4444;
 }
 
-.slots {
+.room-slots {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -88,7 +88,7 @@ body {
 }
 
 input {
-    width: 96.7%;
+    width: 96.6%;
     padding: 15px;
     font-size: 18px;
     border-radius: 10px;
@@ -176,9 +176,19 @@ input {
     width: 100%;
 }
 
+.admin-slots {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+
 @media (min-width: 769px) {
     .admin-slot:hover {
         transform: scale(1.03);
+    }
+    .room-slots {
+        margin-top: 10px;
     }
 }
 
@@ -262,7 +272,7 @@ input {
         font-size: 28px;
     }
 
-    .slots {
+    .room-slots {
         grid-template-columns: 1fr;
         gap: 12px;
     }
@@ -361,4 +371,11 @@ input {
 
     margin-top: 20px;
     }
+
+    .buttons-wrapper .switch-page-btn {
+    flex: 1;
+    text-align: center;
+    max-height: 30px;
+    }
+
 }
