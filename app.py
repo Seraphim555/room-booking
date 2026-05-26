@@ -119,8 +119,11 @@ def home():
                 <h1>Аудитории</h1>
 
                 <div class="datetime">
-                    Dashboard
-                </div>
+
+                <div id="date"></div>
+                <div id="time"></div>
+
+            </div>
 
             </div>
 
@@ -131,6 +134,12 @@ def home():
             </div>
 
         </div>
+    
+        <script>
+            const ROOM_ID = "101";
+        </script>
+
+        <script src="/static/script.js"></script>
 
     </body>
 
