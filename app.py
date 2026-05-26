@@ -7,18 +7,9 @@ from zoneinfo import ZoneInfo
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s"
-)
-
-logger = logging.getLogger(__name__)
-
-log = logging.getLogger('werkzeug')
-log.setLevel(logging.ERROR)
 
 BOOKING_FILE = "bookings.json"
-
+TIMEZONE = ZoneInfo("Asia/Yekaterinburg")
 
 def generate_slots():
     slots = []
@@ -59,7 +50,16 @@ def home():
 
         room_data = data.get(room, {})
 
-        is_busy = len(room_data) > 0
+        now = datetime.now(TIMEZONE)
+
+        current_hour = now.hour
+        current_minute = now.minute
+
+        slot_minute = "00" if current_minute < 30 else "30"
+
+        current_slot = f"{current_hour:02}:{slot_minute}"
+
+        is_busy = current_slot in room_data
 
         status_class = "busy" if is_busy else "free"
 
@@ -151,7 +151,6 @@ def home():
 @app.route("/room/<room_id>")
 def room(room_id):
 
-    logger.info(f"Открыт экран аудитории {room_id}")
 
     return render_template(
         "room.html",
@@ -162,8 +161,6 @@ def room(room_id):
 
 @app.route("/admin/<room_id>")
 def admin(room_id):
-
-    logger.info(f"Открыта панель бронирования {room_id}")
 
     return render_template(
         "admin.html",
@@ -180,7 +177,7 @@ def get_room(room_id):
     if room_id not in data:
         data[room_id] = {}
 
-    now = datetime.now(ZoneInfo("Asia/Yekaterinburg"))
+    now = datetime.now(TIMEZONE)
     current_slot = None
 
     for slot in generate_slots():
@@ -216,10 +213,6 @@ def book():
     slot = req["slot"]
     name = req["name"]
 
-    logger.info(
-    f"Бронирование: аудитория={room}, слот={slot}, пользователь={name}"
-    )
-
     data = load_bookings()
 
     user_slots = 0
@@ -232,10 +225,6 @@ def book():
                 user_slots += 1
 
     if user_slots >= 6:
-
-        logger.warning(
-            f"Превышен лимит слотов: пользователь={name}"
-        )
 
         return jsonify({
             "success": False,
@@ -255,10 +244,6 @@ def book():
 
     save_bookings(data)
 
-    logger.warning(
-    f"Попытка занять уже занятый слот: аудитория={room}, слот={slot}"
-    )
-
     return jsonify({
         "success": True
     })
@@ -271,10 +256,6 @@ def free_slot():
 
     room = req["room"]
     slot = req["slot"]
-
-    logger.info(
-    f"Освобождение слота: аудитория={room}, слот={slot}"
- )
 
     data = load_bookings()
 
@@ -289,8 +270,6 @@ def free_slot():
 
 
 if __name__ == "__main__":
-
-    logger.info("Сервер запущен")
 
     port = int(os.environ.get("PORT", 10000))
 
