@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 import json
 import os
 import logging
+from zoneinfo import ZoneInfo
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
@@ -179,7 +180,7 @@ def get_room(room_id):
     if room_id not in data:
         data[room_id] = {}
 
-    now = datetime.now()
+    now = datetime.now(ZoneInfo("Asia/Yekaterinburg"))
     current_slot = None
 
     for slot in generate_slots():
