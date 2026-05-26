@@ -93,6 +93,7 @@ input {
     font-size: 18px;
     border-radius: 10px;
     border: 1px solid #ccc;
+    margin-bottom: 0 !important;
 }
 
 .datetime {
@@ -376,14 +377,16 @@ input {
     flex: 1;
     text-align: center;
     max-height: 50px;
-    }
-
-    .admin-slots {
-        margin-top: 6px;
+    margin-top: 0 !important;
+    margin-bottom: 20px;
     }
 
     .room-slots {
-        margin-top: 6px;
+        margin-top: 10px;
+    }
+
+    .status-card {
+    margin-bottom: 20px;
     }
 
 }
