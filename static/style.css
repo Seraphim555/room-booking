@@ -358,7 +358,8 @@ input {
 
     background: #ffffffd9;
 
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     font-size: 16px;
 
