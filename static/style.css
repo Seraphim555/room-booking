@@ -222,6 +222,8 @@ input {
         background-repeat: no-repeat;
 
         background-attachment: fixed;
+
+        -webkit-font-smoothing: antialiased;
     }
 
     .container {
@@ -261,18 +263,18 @@ input {
         font-size: 22px;
     }
 
-    .datetime {
-        font-size: 18px;
-    }
-
     .status-card {
     margin-top: 20px;
+
+    margin-bottom: 20px;
 
     padding: 40px;
 
     border-radius: 28px;
 
     color: white;
+
+    font-size: 28px;
 
     text-align: center;
 
@@ -282,13 +284,10 @@ input {
         0 12px 30px rgba(0,0,0,0.12);
     }
 
-    .status-card h2 {
-        font-size: 28px;
-    }
-
     .room-slots {
         grid-template-columns: 1fr;
         gap: 12px;
+        margin-top: 10px;
     }
 
     .slot {
@@ -337,70 +336,43 @@ input {
     touch-action: manipulation;
     }
     
-    
     * {
-    box-sizing: border-box;
-    }
-    body {
-    -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
     }
 
     .datetime {
-    text-align: right;
-    white-space: nowrap;
-    }
+        text-align: right;
+        white-space: nowrap;
 
-    .datetime {
+        padding: 0;
 
-    padding: 8px 14px;
+        border-radius: 999px;
 
-    border-radius: 999px;
+        background: transparent;
+        backdrop-filter: none;
 
-    background: #ffffffd9;
+        font-size: 16px;
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    font-size: 16px;
-
-    font-weight: 600;
+        font-weight: 600;
     }
 
     .switch-page-btn:active {
     transform: scale(0.98);
     }
     
-    .switch-page-btn {
-
-    padding: 12px;
-
-    font-size: 16px;
-
-    border-radius: 20px;
-
-    margin-top: 20px;
-    }
-
     .buttons-wrapper .switch-page-btn {
-    flex: 1;
-    text-align: center;
-    max-height: 100px;
-    margin-top: 0 !important;
-    margin-bottom: 20px;
+        flex: 1;
+        text-align: center;
+        max-height: 100px;
+        
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 20px;
+        
+        margin-top: 0 !important; 
+        margin-bottom: 20px;
     }
 
-    .room-slots {
-        margin-top: 10px;
-    }
-
-    .status-card {
-    margin-bottom: 20px;
-    }
-
-    datetime {
-
-        font-size: 13px;
-    }
 
     .admin-slots {
         grid-template-columns: 1fr;
