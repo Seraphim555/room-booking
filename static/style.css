@@ -184,6 +184,19 @@ input {
     gap: 15px;
 }
 
+.datetime {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+}
+
 @media (min-width: 769px) {
     .admin-slot:hover {
         transform: scale(1.03);
@@ -387,6 +400,11 @@ input {
 
     .status-card {
     margin-bottom: 20px;
+    }
+
+    datetime {
+
+        font-size: 13px;
     }
 
 }

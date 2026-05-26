@@ -50,7 +50,7 @@ def home():
 
     data = load_bookings()
 
-    rooms = ["101", "102", "103"]
+    rooms = ["101", "102", "103", "201", "202", "203"]
 
     room_cards = ""
 
