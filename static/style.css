@@ -371,7 +371,7 @@ input {
     
     .switch-page-btn {
 
-    padding: 16px;
+    padding: 10px;
 
     font-size: 16px;
 
@@ -383,7 +383,7 @@ input {
     .buttons-wrapper .switch-page-btn {
     flex: 1;
     text-align: center;
-    max-height: 50px;
+    max-height: 100px;
     margin-top: 0 !important;
     margin-bottom: 20px;
     }
@@ -531,17 +531,6 @@ input {
     transition:
         transform 0.2s ease,
         opacity 0.2s ease;
-}
-
-
-.room-btn.secondary {
-
-    background:
-        linear-gradient(
-            135deg,
-            #475569 0%,
-            #334155 100%
-        );
 }
 
 
