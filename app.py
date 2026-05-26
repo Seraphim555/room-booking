@@ -83,10 +83,6 @@ def home():
                     Экран аудитории
                 </a>
 
-                <a href="/admin/{room}" class="room-btn secondary">
-                    Бронирование
-                </a>
-
             </div>
 
         </div>
@@ -120,7 +116,7 @@ def home():
 
             <div class="top-panel">
 
-                <h1>Система аудиторий</h1>
+                <h1>Аудитории</h1>
 
                 <div class="datetime">
                     Dashboard
