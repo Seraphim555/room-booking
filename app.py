@@ -47,14 +47,98 @@ def save_bookings(data):
 
 @app.route("/")
 def home():
-    return """
-    <h1>Система бронирования аудиторий</h1>
 
-    <ul>
-        <li><a href='/room/101'>Аудитория 101</a></li>
-        <li><a href='/room/102'>Аудитория 102</a></li>
-        <li><a href='/room/103'>Аудитория 103</a></li>
-    </ul>
+    data = load_bookings()
+
+    rooms = ["101", "102", "103"]
+
+    room_cards = ""
+
+    for room in rooms:
+
+        room_data = data.get(room, {})
+
+        is_busy = len(room_data) > 0
+
+        status_class = "busy" if is_busy else "free"
+
+        status_text = "Занята" if is_busy else "Свободна"
+
+        room_cards += f"""
+        <div class="room-card {status_class}">
+
+            <div class="room-card-header">
+
+                <h2>Аудитория {room}</h2>
+
+                <div class="room-status">
+                    {status_text}
+                </div>
+
+            </div>
+
+            <div class="room-buttons">
+
+                <a href="/room/{room}" class="room-btn">
+                    Экран аудитории
+                </a>
+
+                <a href="/admin/{room}" class="room-btn secondary">
+                    Бронирование
+                </a>
+
+            </div>
+
+        </div>
+        """
+
+    return f"""
+    <!DOCTYPE html>
+    <html lang="ru">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Система аудиторий</title>
+
+        <link
+            rel="stylesheet"
+            href="/static/style.css?v=10"
+        >
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="top-panel">
+
+                <h1>Система аудиторий</h1>
+
+                <div class="datetime">
+                    Dashboard
+                </div>
+
+            </div>
+
+            <div class="rooms-grid">
+
+                {room_cards}
+
+            </div>
+
+        </div>
+
+    </body>
+
+    </html>
     """
 
 
