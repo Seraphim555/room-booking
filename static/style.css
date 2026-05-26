@@ -141,17 +141,19 @@ input {
 
 .input-error {
 
-    margin-top: 8px;
+    margin-top: 6px;
 
-    margin-bottom: 18px;
+    margin-bottom: 8px;
 
-    padding-left: 6px;
+    padding-left: 4px;
 
     color: #dc2626;
 
-    font-size: 15px;
+    font-size: 14px;
 
     font-weight: 600;
+
+    line-height: 1.2;
 
     opacity: 0;
 
