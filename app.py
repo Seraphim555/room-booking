@@ -116,7 +116,7 @@ def home():
 
             <div class="top-panel">
 
-                <h1>Аудитории</h1>
+                <h1>Список аудиторий</h1>
 
                 <div class="datetime">
 
