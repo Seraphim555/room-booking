@@ -2,14 +2,15 @@ from flask import Flask, render_template, request, jsonify
 from datetime import datetime, timedelta
 import json
 import os
-import logging
 from zoneinfo import ZoneInfo
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
+
 BOOKING_FILE = "bookings.json"
 TIMEZONE = ZoneInfo("Asia/Yekaterinburg")
+
 
 def generate_slots():
     slots = []
