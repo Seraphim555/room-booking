@@ -390,3 +390,205 @@ input {
     }
 
 }
+
+/* =========================
+   MAIN MENU
+========================= */
+
+.rooms-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 24px;
+}
+
+
+.room-card {
+
+    background:
+        rgba(255,255,255,0.75);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 28px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.08);
+
+    border:
+        1px solid rgba(255,255,255,0.35);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.room-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.12);
+}
+
+
+.room-card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 24px;
+}
+
+
+.room-card-header h2 {
+
+    margin: 0;
+
+    font-size: 28px;
+}
+
+
+.room-status {
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: white;
+}
+
+
+.room-card.free .room-status {
+
+    background: #16a34a;
+}
+
+
+.room-card.busy .room-status {
+
+    background: #dc2626;
+}
+
+
+.room-buttons {
+
+    display: flex;
+
+    gap: 12px;
+}
+
+
+.room-btn {
+
+    flex: 1;
+
+    text-align: center;
+
+    padding: 14px;
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb 0%,
+            #1d4ed8 100%
+        );
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.room-btn.secondary {
+
+    background:
+        linear-gradient(
+            135deg,
+            #475569 0%,
+            #334155 100%
+        );
+}
+
+
+.room-btn:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.95;
+}
+
+
+.room-btn:active {
+
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   MOBILE VERSION
+========================= */
+
+@media (max-width: 768px) {
+
+    .rooms-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .room-buttons {
+
+        flex-direction: column;
+    }
+
+    .room-card {
+
+        padding: 20px;
+    }
+
+    .room-card-header {
+
+        align-items: flex-start;
+    }
+
+    .room-card-header h2 {
+
+        font-size: 22px;
+    }
+
+    .room-status {
+
+        font-size: 12px;
+
+        padding: 6px 12px;
+    }
+
+    .room-btn {
+
+        font-size: 15px;
+
+        padding: 13px;
+    }
+}
